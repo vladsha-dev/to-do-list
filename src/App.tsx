@@ -1,13 +1,14 @@
-import React from 'react';
+import { ReactElement } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-const App = () => {
-  return (
-    <div className="App">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-    </div>
-  );
-}
+import WelcomePage from "./components/pages/WelcomePage"
 
-export default App;
+const App = (): ReactElement => (
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<WelcomePage />} />
+        </Routes>
+    </BrowserRouter>
+)
+
+export default App
