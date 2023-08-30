@@ -12,7 +12,7 @@ theme = responsiveFontSizes(theme);
 const App = (): ReactElement => (
     <ThemeProvider theme={theme}>
         <BrowserRouter>
-            <Suspense fallback={<>LOADING....</>}>
+            <Suspense fallback={<>LOADING...</>}>
                 <Routes>
                     <Route path="/" element={<WelcomePageComponent />} />
                     <Route path="lists" element={<ListsPageComponent />} />
