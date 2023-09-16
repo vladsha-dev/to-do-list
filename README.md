@@ -31,7 +31,7 @@ _For Mac_
 4. Set `DISPLAY=$IP:0`.
 5. Finally run: `docker-compose -f docker-compose.yml -f cy-open.yml up --exit-code-from cypress`. Be ready to see the Cypress interface in the XQuartz window. The page will reload if you make any edits inside the e2e/cypress folder.
 
-[!NOTE]\
+**NOTE**\
 Stay inside the /e2e directory.
 
 _For Windows_
