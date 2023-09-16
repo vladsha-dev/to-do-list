@@ -1,0 +1,12 @@
+{
+    "name": "e2e",
+    "version": "1.0.0",
+    "description": "Cypress tests",
+    "main": "index.js",
+    "author": "Vladyslav Shapovalov",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "typescript": "^4.4.2"
+    }
+}

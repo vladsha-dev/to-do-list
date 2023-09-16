@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+    todo-list-app:
+        build:
+            context: ../
+        ports:
+            - 6543:3000
+        volumes:
+            - ../:/app
+            - /app/node_modules
+    cypress:
+        build:
+            context: .
+        depends_on:
+            - todo-list-app
+        environment:
+            # Pass base url to test pointing at the web application.
+            - CYPRESS_baseUrl=http://todo-list-app:3000
+        volumes:
+            - ./cypress:/e2e/cypress
+            - /e2e/node_modules

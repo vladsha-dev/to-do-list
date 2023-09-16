@@ -2,8 +2,6 @@
 
 FROM node:20-alpine
 
-RUN apk --no-cache add git
-
 ENV NODE_ENV=development
 
 WORKDIR /app
