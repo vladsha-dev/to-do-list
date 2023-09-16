@@ -29,7 +29,7 @@ _For Mac_
 2. Set the IP variable as the ip of your local machine. Run the following command in the terminal: `IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')`. If you’re on wifi you may want to use en1 instead of en0, check the value of the variable using `echo $IP`.
 3. Add the IP using Xhost with `xhost + $IP`. If the xhost command is not found check /usr/X11/bin/xhost as that might not be in your path.
 4. Set `DISPLAY=$IP:0`.
-5. Finally run: `docker-compose -f docker-compose.yml -f cy-open.yml up --exit-code-from cypress`. Be ready to see the Cypress interface in the XQuartz window. The page will reload if you make any edits inside the e2e/cypress folder.
+5. Finally run: `docker-compose -f docker-compose.yml -f cy-open.yml up --exit-code-from cypress --build`. Be ready to see the Cypress interface in the XQuartz window. The page will reload if you make any edits inside the e2e/cypress folder.
 
 **NOTE**\
 Stay inside the /e2e directory.
